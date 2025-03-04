@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    container_name: gitlab
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.example.com'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2222
+    ports:
+      - "80:80"      # Web interface
+      - "443:443"    # HTTPS (optional, requires SSL setup)
+      - "2222:22"    # SSH access for repositories
+    volumes:
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
+    shm_size: '256m'
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:
