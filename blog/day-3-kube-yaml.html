@@ -1,0 +1,47 @@
+## Day 3: YAML, Vim, and Saying Goodbye to Nano
+
+Today was all about YAML, the language Kubernetes uses to define everything. (Used a lot in Docker, so a familiar space for me!) Writing YAML manually can be a pain, but Kubernetes has some tricks to make it easier. I also learned a few Vim hacks that made working with YAML files a lot smoother—looks like I’m officially making the switch from Nano.
+
+## Editing YAML in the Cluster (But Should You?)
+Kubernetes lets you edit resources directly in the cluster using:
+
+kubectl edit pod <pod-name> 
+
+This opens the Pod’s YAML file in Vim so I can make quick changes. It’s useful, but in the real world, editing live configs isn’t best practice. Everything should be version-controlled and applied properly. That said, knowing this is a must for the CKA exam, so I made sure to practice.
+
+## Generating YAML with Dry Runs
+Instead of writing a YAML file from scratch, Kubernetes can generate a template for me:
+
+kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx.yaml 
+
+Now I have a nginx.yaml file ready to be modified before deployment. Much easier than starting from zero.
+
+## Making Vim Play Nice with YAML
+One of the most frustrating things about working with YAML is pasting text into Vim and having the indentation go crazy. I found a simple fix:
+
+:set paste 
+
+This prevents Vim from messing with formatting when pasting content. Definitely a lifesaver when copying YAML configs.
+
+## YAML Example
+Here’s the YAML file I generated and modified:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-yaml
+  labels:
+    run: nginx-yaml
+    method: fromcode
+    another: label
+spec:
+  containers:
+  - name: nginx
+    image: nginx 
+
+This defines a simple Pod running an Nginx container.
+
+## Final Thoughts
+YAML is everywhere in Kubernetes, so getting comfortable with it is a must. Between learning how to generate, edit, and cleanly paste YAML, today’s session felt like a big step forward. Also, after years of using Nano, it looks like Vim is officially my new editor.
+
+Next up: Interacting with Pods—checking logs, troubleshooting, and getting hands-on with running containers.
