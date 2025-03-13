@@ -1,0 +1,38 @@
+## Day 4: Getting Inside Pods—Running, Debugging, and Troubleshooting
+
+Today was all about getting inside Kubernetes Pods and working with them directly. Knowing how to interact with a running Pod, troubleshoot issues, and verify connectivity is a critical skill—especially when something inevitably goes wrong.
+
+## Key Takeaways
+Executing Commands Inside a Pod
+Kubernetes allows you to jump into a running Pod and execute commands inside its container. This is useful for checking logs, debugging, or installing tools.
+
+kubectl exec -it <pod-name> -- /bin/bash
+
+If the container doesn’t have Bash, I had to use sh instead:
+
+kubectl exec -it <pod-name> -- sh
+
+Once inside, it’s basically like SSHing into a machine, except it’s a container.
+
+## Installing and Updating Packages
+Not all Pods come with the tools you need. If a troubleshooting Pod is missing curl, ping, or net-tools, I had to install them manually (assuming the container had package management).
+
+
+apt update && apt install -y net-tools
+
+This was especially useful when I needed to check network connectivity between Pods.
+
+## Pinging Between Pods to Verify Connectivity
+One of the most important things I learned today was how to test networking between Pods. Once inside a Pod, I could ping another Pod using its name or IP:
+
+ping <other-pod-name>
+
+If the Pod didn’t respond, it was either a network policy issue or DNS resolution wasn’t working properly.
+
+## Realizing How Much Bash Matters
+Since Pods are just Linux containers running inside Kubernetes, knowing Bash is a huge advantage. I’ve been working with Bash for years, so this part felt natural. But if I had to do all of this in PowerShell instead, I would have been struggling. Bash is second nature to me, so troubleshooting inside a Pod felt familiar.
+
+## Final Thoughts
+Today was an important step because being able to troubleshoot inside a Pod is a skill I’ll need constantly. Whether it's checking logs, verifying network issues, or installing missing tools, knowing how to execute commands inside a running Pod is a must-have skill for Kubernetes.
+
+Next, I’ll be learning more about Kubernetes Deployments and how to manage Pods efficiently.
