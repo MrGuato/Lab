@@ -1,0 +1,32 @@
+Day 5: Scaling Pods with Deployments (And Fixing My Own Mistakes)
+
+After a short break for work and family, I’m back on my Kubernetes journey—this time diving into Deployments. If Pods are the individual units in Kubernetes, Deployments give you the power to scale, manage, and ensure high availability with ease.
+
+Key Takeaways
+
+Deployments = Many Pods, Automatically Managed
+A Deployment lets you run multiple instances of the same Pod and ensures they stay running. For example, setting replicas: 3 means Kubernetes will always keep three Pods running, even if one crashes.
+
+kubectl describe = Debugging Superpower
+Running:
+
+kubectl describe deployment <deployment-name>
+
+gives detailed information about the Deployment, including Events, which are useful for spotting errors and tracking what Kubernetes is doing behind the scenes.
+
+Generating YAML with Dry Runs
+Instead of writing YAML from scratch, I can generate a base configuration using:
+
+kubectl run mrguato --image=nginx --dry-run=client -o yaml
+
+
+This creates a YAML template that I can modify before applying it.
+
+Learning from My Own Mistakes
+While experimenting, I accidentally deployed 10 replicas with an incorrect image name—which obviously failed. I had to go back, fix the YAML, and reapply it. A good reminder that Kubernetes does exactly what you tell it to do—whether right or wrong.
+
+Final Thoughts
+
+Deployments make Kubernetes management far more scalable and reliable compared to running individual Pods. Being able to adjust configurations via YAML and troubleshoot with describe is key for keeping everything running smoothly.
+
+Next step: Exploring how Services connect Deployments and make applications accessible.
