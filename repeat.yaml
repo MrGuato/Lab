@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: repeat
+  name: repeat
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: repeat
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: repeat
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources: {}
+status: {}
