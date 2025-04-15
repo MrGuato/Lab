@@ -1,74 +1,78 @@
 # 🧪 Kubernetes Homelab Playground 🚀
 
-[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
-[![DevOps](https://img.shields.io/badge/DevOps-Lab-blueviolet?logo=githubactions&logoColor=white)](https://github.com/mrcyberleon)
-[![Learning in Public](https://img.shields.io/badge/Learning%20in%20Public-%F0%9F%94%8D-ff69b4)](https://mrcyberleon.hashnode.dev)
-[![Misha's K8s Course](https://img.shields.io/badge/Misha%20K8s%20Course-%E2%9C%A8-success)](https://mshah.io/k8s)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Homelab-blue?logo=kubernetes)
+![DevOps](https://img.shields.io/badge/DevOps-Learning-orange?logo=github)
+![In_Progress](https://img.shields.io/badge/Status-Learning_in_Public-yellow)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-> “Everything breaks, fix it with YAML.” — Probably Me
+**DevOps & Kubernetes Learning in Public**  
+_License: MIT_
+
+> “Everything breaks. Fix it with YAML.” — Probably Me
 
 ---
 
 ## 📘 About This Repository
 
-Welcome to my Kubernetes Homelab repo! This is where I document everything I'm learning and building as I level up in DevOps — one deployment at a time. Whether it's following **Misha's excellent Kubernetes course**, experimenting with **self-hosted services**, or just breaking things and putting them back together — it all lives here.
+Welcome to my Kubernetes Homelab repo! This is where I document everything I'm learning and building as I grow in DevOps — one deployment at a time. From testing self-hosted services to refining YAML files and learning real-world troubleshooting, this is my hands-on journey with Kubernetes.
 
-Think of this as my DevOps playground — full of manifests, Helm charts, notes, diagrams, and war stories from the YAML trenches.
+Think of this as my digital lab notebook — filled with manifests, Helm charts, config notes, and lessons learned from breaking things (intentionally or otherwise).
 
 ---
 
 ## 🧱 What You'll Find Here
 
-- ✅ **Kubernetes Concepts** — Pods, Services, Ingress, ConfigMaps, Secrets, etc.
-- 🔧 **Helm Charts** — Custom Helm deployments and tinkering with templates.
+- ✅ **Kubernetes Fundamentals** — Pods, Services, Ingress, ConfigMaps, Secrets, etc.
+- 🔧 **Helm Charts** — Custom Helm deployments and template experiments.
 - 🐳 **Containerization** — Building and deploying Docker images.
-- 🔐 **Security Best Practices** — Securing clusters, namespaces, RBAC, and more.
-- ☁️ **Self-Hosting Projects** — Deploying apps like Nginx Proxy Manager, GitLab, and more.
-- 🧪 **Lab Experiments** — Networking, storage, GitOps, CI/CD... chaos included.
+- 🔐 **Security Practices** — Securing clusters, RBAC, namespace controls, etc.
+- ☁️ **Self-Hosting Projects** — Deploying apps like Mealie, Nginx, and GitLab.
+- 🧪 **Lab Experiments** — Networking, volumes, GitOps, CI/CD workflows, and more.
 
 ---
 
 ## 🗺️ Roadmap / Progress
 
-| Area                 | Status        |
-|----------------------|---------------|
-| Kubernetes Basics    | ✅ Completed via Misha's course |
-| Helm & Templates     | 🛠️ In Progress |
-| GitOps with ArgoCD   | 🔜 Coming Soon |
-| K8s + CI/CD (GitHub Actions) | 🔜 Coming Soon |
+| Area                          | Status           |
+|-------------------------------|------------------|
+| Kubernetes Core Concepts      | ✅ Completed |
+| Persistent Storage            | 🛠️ In Progress |
+| K9s                           | 🛠️ In Progress |
 | Monitoring (Prometheus, Grafana) | 🔜 Coming Soon |
-| Secrets Management   | 🛠️ Lab Testing |
-| Disaster Recovery    | 🧪 Experimental |
+| Helm & Template Customization | 🛠️ In Progress |
+| GitOps with ArgoCD            | 🔜 Coming Soon |
+| K8s + CI/CD (GitHub Actions)  | 🔜 Coming Soon |
+| Secrets Management            | 🧪 Lab Testing |
+| Disaster Recovery             | 🧪 Experimental |
 
 ---
 
 ## 📚 Learning Sources
 
-- [Misha’s Kubernetes Course](https://mshah.io/k8s) - Hands-down the best intro course.
-- [Kubernetes Docs](https://kubernetes.io/docs/) - Because RTFM.
-- [Awesome Kubernetes](https://github.com/ramitsurana/awesome-kubernetes) - Bookmark this!
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Awesome Kubernetes GitHub](https://github.com/ramitsurana/awesome-kubernetes)
+- Community content, blog posts, lab trial & error
 
 ---
 
 ## ✍️ How I'm Using This Repo
 
-This repo is **my second brain** for all things Kubernetes and DevOps:
+This repo acts as my second brain for Kubernetes and DevOps:
 
-- ✅ Document what I learn in real time.
-- ✅ Share configs and experiments.
-- ✅ Track progress on homelab projects.
-- ✅ Learn by doing (and breaking).
-- ✅ Showcase skills for future roles.
+- ✅ Documenting what I learn in real time
+- ✅ Sharing working configurations and experiments
+- ✅ Tracking homelab projects and infrastructure setups
+- ✅ Learning by doing (and breaking, then fixing)
+- ✅ Demonstrating hands-on skills for future roles
 
-Everything I push here is a part of my **"learn in public"** journey. If you're also navigating the DevOps seas, feel free to fork, star, or reach out!
+Every commit reflects something I’ve learned, tested, or struggled with. If you’re on a similar path, feel free to fork, star, or connect!
 
 ---
 
 ## 🧠 Philosophy
 
-> “Don’t just learn Kubernetes. Understand the why behind the YAML.”  
-> — Also Probably Me
+> “Don’t just memorize Kubernetes commands. Understand the *why* behind the YAML.”  
+> — Still Probably Me
 
 ---
 
@@ -76,12 +80,10 @@ Everything I push here is a part of my **"learn in public"** journey. If you're 
 
 - 🌐 [cloud.mrcyberleon.org](https://cloud.mrcyberleon.org)
 - 📝 [Blog: mrcyberleon.hashnode.dev](https://mrcyberleon.hashnode.dev)
-- 🐙 [GitHub: @mrcyberleon](https://github.com/mrcyberleon)
+- 🐙 GitHub: [@mrcyberleon](https://github.com/mrcyberleon)
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
-
----
